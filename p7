@@ -1,0 +1,31 @@
+program 7
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+namespace lab7
+{
+ public delegate int ArithmeticOperation(int q,int p);
+ internal class Program
+ {
+ public static int add(int p,int q)
+ {
+ return p + q;
+ }
+ public int multi(int p, int q)
+ {
+ return p * q;
+ }
+ static void Main(string[] args)
+ {
+ ArithmeticOperation ap = new ArithmeticOperation(add);
+ Console.WriteLine("Addition: " + ap(5, 10));
+ Program p = new Program();
+ ap = new ArithmeticOperation(p.multi);
+ Console.WriteLine("Multiplication: " + ap(5, 10));
+ }
+ }
+}
