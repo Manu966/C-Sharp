@@ -1,0 +1,52 @@
+Program 10
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace lab10
+{
+public interface shape
+ {
+ void draw();
+ }
+ public class circle : shape
+ {
+ void shape.draw()
+ {
+ Console.WriteLine("this is a circle");
+ }
+ }
+ public class triangle : shape
+ {
+ void shape.draw()
+ {
+ Console.WriteLine("this is a triangle");
+ }
+ }
+ public class square : shape
+ {
+ void shape.draw()
+ {
+ Console.WriteLine("this is a square");
+ }
+ }
+ public class hexa : shape
+ {
+ void shape.draw()
+ {
+ Console.WriteLine("this is a hexa");
+ }
+ }
+ internal class Program
+  {
+ static void Main(string[] args)
+ {
+ shape[] shape = { new circle(),new triangle(),new square(),new hexa() };
+ foreach(shape a in shape){
+ a.draw();
+ }
+ }
+ }
+}
