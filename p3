@@ -1,0 +1,40 @@
+Program 3
+
+using System;
+namespace lab3
+{
+ class complex
+ {
+ public double real { get; set; }
+ public double imaginary { get; set; }
+ public complex(double real, double imaginary)
+ {
+ this.real = real;
+ this.imaginary = imaginary;
+ }
+ public static complex operator +(complex c1, complex c2)
+ {
+ return new complex(c1.real + c2.real, c1.imaginary + c2.imaginary);
+ }
+ public override string ToString()
+ {
+ return $"{real}+{imaginary}i";
+ }
+ }
+ class program
+ {
+ public static void Main(string[] args)
+ {
+ Console.WriteLine("enter real and imaginary 1");
+ double real1 = double.Parse(Console.ReadLine());
+ double imaginary1 = double.Parse(Console.ReadLine());
+ Console.WriteLine("enter real and imaginary 2");
+ double real2 = double.Parse(Console.ReadLine());
+ double imaginary2 = double.Parse(Console.ReadLine());
+ complex num1 = new complex(real1, imaginary1);
+ complex num2 = new complex(real2, imaginary2);
+ complex sum = num1 + num2;
+ Console.WriteLine("sum of the two complex number is :"+sum);
+ }
+ }
+}
