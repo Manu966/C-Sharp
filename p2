@@ -1,0 +1,54 @@
+Program 2A
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace pgm2a
+{
+ internal class Program
+ {
+ static void Main(string[] args)
+ {
+ int i = 123;
+ object o = i;
+ int j = (int)o;
+ Console.WriteLine("the valuetype value before boxing" + i);
+ Console.WriteLine("the object type value after boxing" + o);
+ Console.WriteLine("the valuetype after unboxing" + j);
+ Console.ReadLine();
+ }
+ }
+}
+
+
+
+Program 2B
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace pgm2a
+{
+ internal class Program
+ {
+ static void Main(string[] args)
+ {
+ int i = 123;
+ object o = i;
+ try
+ {
+ int j = (short)o;
+ Console.WriteLine("unboxing is sucessfull");
+ }
+ catch (InvalidCastException e)
+ {
+ Console.WriteLine("Invalid boxing"+e.Message);
+ Console.ReadLine();
+ }
+ }
+ }
+}
