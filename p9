@@ -1,0 +1,34 @@
+Program 9
+
+using System;
+ namespace lab9
+ {
+ class person
+ {
+ private string name;
+ public string Name
+ {
+ get { return name; }
+ set { name = value; }
+ }
+ private int age;
+ public int Age
+ {
+ get { return age; }
+ set { age = value; }
+ }
+ }
+ class program
+ {
+ public static void Main(string[] args)
+ {
+ person p = new person();
+ Console.WriteLine("enter the name of the person");
+ p.Name = Console.ReadLine();
+ Console.WriteLine("enter thw age of the person");
+ p.Age = Convert.ToInt32(Console.ReadLine());
+ Console.WriteLine("name of the persom is:"+p.Name);
+ Console.WriteLine("age of the person is :"+p.Age);
+ }
+ }
+ }
